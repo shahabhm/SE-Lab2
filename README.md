@@ -212,7 +212,7 @@
 <p><strong>موارد نقض</strong></p>
 </td>
 <td>
-کلاس Exp_03_With_Solid.Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
+کلاس Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
 
 اینترفیس OrderService نیز هم مسئول پرداخت و هم ثبت سفارش است.
 <p>&nbsp;</p>
@@ -235,7 +235,7 @@
 <td>
 <p><strong>موارد نقض</strong></p>
 </td>
-کلاس Exp_03_With_Solid.Main چون که برای ایجاد یک فیچر جدید مجبور به تغییر آن شدیم.
+کلاس Main چون که برای ایجاد یک فیچر جدید مجبور به تغییر آن شدیم.
 <td>
 <p>&nbsp;</p>
 </td>
@@ -300,7 +300,7 @@
 <p><strong>موارد نقض</strong></p>
 </td>
 <td>
-کلاس اصلی (Exp_03_With_Solid.Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
+کلاس اصلی (Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -325,7 +325,7 @@
 <tr>
 Single Responsibility
 <td width="168">
-کلاس Exp_03_With_Solid.Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
+کلاس Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
 <p>&nbsp;</p>
 </td>
 می‌توانیم برای هرکدام از این وظایف یک کلاس تعریف کرده و بجای پیاده‌سازی همه لاجیک در کلاس main، صرفا آن‌ها را صدا زده و باقی کار را به آن‌ها واگذار کنیم.
@@ -340,15 +340,15 @@ Single Responsibility - Interface Segregation Principle - Liskov Substitution Pr
 <tr>
 Open-Close Principle (OCP)
 <td width="168">
-کلاس Exp_03_With_Solid.Main برای افزودن یک فیچر جدید تغییر کرد.
+کلاس Main برای افزودن یک فیچر جدید تغییر کرد.
 <p>&nbsp;</p>
 </td>
-می‌توانیم با استفاده از کلاس‌های factory تولید نمونه‌ها را از Exp_03_With_Solid.Main جدا کنیم.
+می‌توانیم با استفاده از کلاس‌های factory تولید نمونه‌ها را از Main جدا کنیم.
 
 <tr>
 Dependency Inversion Principle
 <td width="168">
-کلاس اصلی (Exp_03_With_Solid.Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
+کلاس اصلی (Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
 <p>&nbsp;</p>
 </td>
 ایده factory این مشکل را حل می‌کند.
