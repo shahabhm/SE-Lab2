@@ -323,49 +323,35 @@
 </td>
 </tr>
 <tr>
+Single Responsibility
 <td width="168">
+کلاس Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
 <p>&nbsp;</p>
 </td>
-<td width="246">
+می‌توانیم برای هرکدام از این وظایف یک کلاس تعریف کرده و بجای پیاده‌سازی همه لاجیک در کلاس main، صرفا آن‌ها را صدا زده و باقی کار را به آن‌ها واگذار کنیم.
+<tr>
+Single Responsibility - Interface Segregation Principle - Liskov Substitution Principle
+<td width="168">
+اینترفیس OrderService شامل توابعی است که همگی در کلاس‌های زیرین کاربرد ندارند و برخی خالی هستند و همینطور کارهای زیادی انجام می‌دهد که کوهیسیو نیست.
 <p>&nbsp;</p>
 </td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
+آن را به چند اینترفیس مختلف می‌شکانیم و هر وظیفه را به یکی واگذار می‌کنیم.
 </tr>
 <tr>
+Open-Close Principle (OCP)
 <td width="168">
+کلاس Main برای افزودن یک فیچر جدید تغییر کرد.
 <p>&nbsp;</p>
 </td>
-<td width="246">
-<p>&nbsp;</p>
-</td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
-</tr>
+می‌توانیم با استفاده از کلاس‌های factory تولید نمونه‌ها را از Main جدا کنیم.
+
 <tr>
+Dependency Inversion Principle
 <td width="168">
+کلاس اصلی (Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
 <p>&nbsp;</p>
 </td>
-<td width="246">
-<p>&nbsp;</p>
-</td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="168">
-<p>&nbsp;</p>
-</td>
-<td width="246">
-<p>&nbsp;</p>
-</td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
-</tr>
+ایده factory این مشکل را حل می‌کند.
 </tbody>
 </table>
 
