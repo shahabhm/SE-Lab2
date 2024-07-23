@@ -49,67 +49,145 @@
 <p><strong>شرحی کوتاه از تغییر</strong></p>
 </td>
 </tr>
+
 <tr>
 <td width="64">
 <p><strong>۱</strong></p>
 </td>
 <td width="198">
-<p>MessageService</p>
+<p>OrderService</p>
 </td>
 <td width="141">
-<p>افزودن تابع ارسال پیام تلگرامی</p>
+<p>افزودن توابع سفارش تلفنی به اینترفیس</p>
 </td>
 <td width="292">
-<p>افزودن یک تابع void با عنوان sendTelegramMessage</p>
+<p>دو تابع phoneOrderPayment و phoneOrderRegister را اضافه کردیم که اولی مبلغ سفارش و دومی نام مشتری را می‌گیرد.</p>
 </td>
 </tr>
 
 <tr>
 <td width="64">
-<p><strong>&nbsp;</strong></p>
+<p><strong>۲</strong></p>
 </td>
 <td width="198">
-<p>&nbsp;</p>
+<p>OnSiteOrderService</p>
 </td>
 <td width="141">
-<p>&nbsp;</p>
+<p>افزودن دو تابع phoneOrderPayment و OnSiteOrderService</p>
 </td>
 <td width="292">
-<p>&nbsp;</p>
+<p>با وجود این که این دو تابع کاری در این کلاس نمی‌کنند،‌اما بخاطر اینترفیس تعریف شده مجبور به اضافه کردن آن‌‌ها در این کلاس شدیم. بدنه‌ی هر دو تابع خالی هستند.</p>
 </td>
 </tr>
+
+
 <tr>
 <td width="64">
-<p><strong>&nbsp;</strong></p>
+<p><strong>۳</strong></p>
 </td>
 <td width="198">
-<p>&nbsp;</p>
+<p>OnlineOrderService</p>
 </td>
 <td width="141">
-<p>&nbsp;</p>
+<p>همان تغییر فایل قبلی</p>
 </td>
 <td width="292">
-<p>&nbsp;</p>
+<p>همان دلیلی که در فایل قبلی گفتیم</p>
 </td>
 </tr>
+
+
 <tr>
 <td width="64">
-<p><strong>&nbsp;</strong></p>
+<p><strong>۴</strong></p>
 </td>
 <td width="198">
-<p>&nbsp;</p>
+<p>PhoneOrderService</p>
 </td>
 <td width="141">
-<p>&nbsp;</p>
+<p>اضافه کردن کلاس PhoneOrderService</p>
 </td>
 <td width="292">
-<p>&nbsp;</p>
+<p>این کلاس اینترفیس OrderService را پیادهٰ‌سازی می‌کند.
+۴ تا از توابعی که در آن هستند مربوط به سفارش حضوری و آنلاین هستند که بخاطر اینترفیس مجبور به گذاشتن آن‌‌ها هستیم و بدنه‌ی آن‌ها خالی هستند.
+توابع phoneOrderRegister و phoneOrderPayment هم به ترتیب نام مشتری و قیمت سفارش را گرفته و پرینت می‌کنند.
+</p>
 </td>
 </tr>
+
+
+<tr>
+<td width="64">
+<p><strong>۵</strong></p>
+</td>
+<td width="198">
+<p>Main</p>
+</td>
+<td width="141">
+<p>ایمپورت کردن کلاس سفارش تلفنی</p>
+</td>
+<td width="292">
+<p>در اول فایل ایمپورت انجام دادیم</p>
+</td>
+</tr>
+
+
+<tr>
+<td width="64">
+<p><strong>۶</strong></p>
+</td>
+<td width="198">
+<p>Main</p>
+</td>
+<td width="141">
+<p>نشان دادن روش سفارش تلفنی در هنگام سفارش گیری از مشتری</p>
+</td>
+<td width="292">
+<p>در قسمت step 2 فایل main
+عدد‌های مربوط به هر یک از روش‌های سفارش گیری به مشتری نشان داده می‌شود که ما عدد ۳ را به سفارش تلفنی اختصاص دادیم.
+</p>
+</td>
+</tr>
+
+
+<tr>
+<td width="64">
+<p><strong>۷</strong></p>
+</td>
+<td width="198">
+<p>Main</p>
+</td>
+<td width="141">
+<p>ساختن آبجکت از نوع سفارش تلفنی</p>
+</td>
+<td width="292">
+<p>در حوالی خط ۵۰، اگر مشتری به صورت تلفنی سفارش خود را ثبت کند، آبجکتی از نوع سرویس سفارش تلفنی را برای سفارش او در نظر می‌گیریم</p>
+</td>
+</tr>
+
+
+<tr>
+<td width="64">
+<p><strong>۸</strong></p>
+</td>
+<td width="198">
+<p>Main</p>
+</td>
+<td width="141">
+<p>پرداخت سفارش تلفنی</p>
+</td>
+<td width="292">
+<p>در حوالی خط ۶۰، اگر مشتری از روش سفارش تلفنی استفاده کرده باشد، تابع phoneOrderPayment
+که در اینترفیس OrderService داریم را برای سفارش مشتری فراخوانی می‌کنیم تا قیمت سفارش پرینت شود.
+</p>
+</td>
+</tr>
+
+
 </tbody>
 </table>
 
-مجموع تعداد تغییرات: ..............
+مجموع تعداد تغییرات: ۸ تغییر
 
 ### گام ۲: تحلیل و وارسی برنامه از منظر تحقق و یا عدم تحقق اصول SOLID
 در خصوص این برنامه‌ای که نوشته شده بود و شما یک قابلیت به آن اضافه کردید، بر اساس اصول SOLID موارد نقض و یا محقق شدن هر کدام از آن اصول را بیان کنید. در بیان موارد تحقق و نقض، علت تحقق و یا نقض را نیز به صورت کامل توضیح دهید:
