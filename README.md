@@ -212,7 +212,7 @@
 <p><strong>موارد نقض</strong></p>
 </td>
 <td>
-کلاس Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
+کلاس Exp_03_With_Solid.Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
 
 اینترفیس OrderService نیز هم مسئول پرداخت و هم ثبت سفارش است.
 <p>&nbsp;</p>
@@ -235,7 +235,7 @@
 <td>
 <p><strong>موارد نقض</strong></p>
 </td>
-کلاس Main چون که برای ایجاد یک فیچر جدید مجبور به تغییر آن شدیم.
+کلاس Exp_03_With_Solid.Main چون که برای ایجاد یک فیچر جدید مجبور به تغییر آن شدیم.
 <td>
 <p>&nbsp;</p>
 </td>
@@ -300,7 +300,7 @@
 <p><strong>موارد نقض</strong></p>
 </td>
 <td>
-کلاس اصلی (Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
+کلاس اصلی (Exp_03_With_Solid.Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -323,49 +323,35 @@
 </td>
 </tr>
 <tr>
+Single Responsibility
 <td width="168">
+کلاس Exp_03_With_Solid.Main چون در آن ۳ کار مختلف انتخاب غذا، روش پرداخت و پرداخت وجود دارد.
 <p>&nbsp;</p>
 </td>
-<td width="246">
+می‌توانیم برای هرکدام از این وظایف یک کلاس تعریف کرده و بجای پیاده‌سازی همه لاجیک در کلاس main، صرفا آن‌ها را صدا زده و باقی کار را به آن‌ها واگذار کنیم.
+<tr>
+Single Responsibility - Interface Segregation Principle - Liskov Substitution Principle
+<td width="168">
+اینترفیس OrderService شامل توابعی است که همگی در کلاس‌های زیرین کاربرد ندارند و برخی خالی هستند و همینطور کارهای زیادی انجام می‌دهد که کوهیسیو نیست.
 <p>&nbsp;</p>
 </td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
+آن را به چند اینترفیس مختلف می‌شکانیم و هر وظیفه را به یکی واگذار می‌کنیم.
 </tr>
 <tr>
+Open-Close Principle (OCP)
 <td width="168">
+کلاس Exp_03_With_Solid.Main برای افزودن یک فیچر جدید تغییر کرد.
 <p>&nbsp;</p>
 </td>
-<td width="246">
-<p>&nbsp;</p>
-</td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
-</tr>
+می‌توانیم با استفاده از کلاس‌های factory تولید نمونه‌ها را از Exp_03_With_Solid.Main جدا کنیم.
+
 <tr>
+Dependency Inversion Principle
 <td width="168">
+کلاس اصلی (Exp_03_With_Solid.Main) به طور مستقیم به کلاس‌های OnlineOrderService، OnSiteOrderService و PhoneOrderService وابسته است که این اصل را نقض می‌کند.
 <p>&nbsp;</p>
 </td>
-<td width="246">
-<p>&nbsp;</p>
-</td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="168">
-<p>&nbsp;</p>
-</td>
-<td width="246">
-<p>&nbsp;</p>
-</td>
-<td width="284">
-<p>&nbsp;</p>
-</td>
-</tr>
+ایده factory این مشکل را حل می‌کند.
 </tbody>
 </table>
 
